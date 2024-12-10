@@ -156,10 +156,8 @@
         <img src="./static/images/method.png"
           class="interpolation-image"
           alt="Interpolate start reference image."/>
-          <h3>(a)</h3>
-          Given the reference image <code>I<sub>ref</sub></code>, target prompt <code>T<sub>tar</sub></code> and concept guidance <code>T<sub>cg</sub></code>, the concept extractor disentangles concept representations <code>f<sub>cpt</sub></code> by concatenating CLIP features <code>f<sub>cg</sub></code> of <code>T<sub>cg</sub></code> with a learnable query <code>q</code>, and feeds <code>f<sub>cpt</sub></code> into additional cross-attention layers in U-Net to generate target image <code>I<sub>tar</sub></code>. A learnable block embedding <code>e<sub>i</sub></code> is added to <code>q</code> to align the concept domain of i-th diffusion block.
-          <h3>(b)</h3>
-          We employ an anti-query <code>q<sub>a</sub></code> to capture irrelevant concepts <code>f<sup>a</sup><sub>cpt</sub></code> in <code>I<sub>ref</sub></code>, and constrain the desired concept <code>f<sup>tar</sup><sub>cpt</sub></code> in <code>I<sub>tar</sub></code> to be similar to <code>f<sub>cpt</sub></code> and orthogonal to <code>f<sup>a</sup><sub>cpt</sub></code> by Contrastive Orthogonal Disentangled (COD) Learning.
+          (a) Given the reference image <code>I<sub>ref</sub></code>, target prompt <code>T<sub>tar</sub></code> and concept guidance <code>T<sub>cg</sub></code>, the concept extractor disentangles concept representations <code>f<sub>cpt</sub></code> by concatenating CLIP features <code>f<sub>cg</sub></code> of <code>T<sub>cg</sub></code> with a learnable query <code>q</code>, and feeds <code>f<sub>cpt</sub></code> into additional cross-attention layers in U-Net to generate target image <code>I<sub>tar</sub></code>. A learnable block embedding <code>e<sub>i</sub></code> is added to <code>q</code> to align the concept domain of i-th diffusion block.
+          (b) We employ an anti-query <code>q<sub>a</sub></code> to capture irrelevant concepts <code>f<sup>a</sup><sub>cpt</sub></code> in <code>I<sub>ref</sub></code>, and constrain the desired concept <code>f<sup>tar</sup><sub>cpt</sub></code> in <code>I<sub>tar</sub></code> to be similar to <code>f<sub>cpt</sub></code> and orthogonal to <code>f<sup>a</sup><sub>cpt</sub></code> by Contrastive Orthogonal Disentangled (COD) Learning.
       </div>
     </div>
     <!--/ Paper video. -->
