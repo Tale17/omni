@@ -136,7 +136,7 @@
           <p>
             Creative visual concept generation often draws inspiration from specific concepts in a reference image to produce relevant outcomes.
             However, existing methods are typically constrained to single-aspect concept generation or are easily disrupted by irrelevant concepts in multi-aspect concept scenarios, leading to concept confusion and hindering creative generation. 
-            To address this, we propose \textbf{OmniPrism}\footnote{\textbf{OmniPrism} is inspired by the way a prism disperses light into its component, analogous to how we disentangle concepts from an image.}, a visual concept disentangling approach for creative image generation.
+            To address this, we propose OmniPrism, a visual concept disentangling approach for creative image generation.
             Our method learns disentangled concept representations guided by natural language and trains a diffusion model to incorporate these concepts.
             We utilize the rich semantic space of a multimodal extractor to achieve concept disentanglement from given images and concept guidance.
             To disentangle concepts with different semantics, we construct a paired concept disentangled dataset (PCD-200K), where each pair shares the same concept such as content, style, and composition.
@@ -149,14 +149,17 @@
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+    <!-- Method. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        <h2 class="title is-3">Method</h2>
+        <img src="./static/images/method.png"
+          class="interpolation-image"
+          alt="Interpolate start reference image."/>
+          h3>(a)</h3>
+          <p>Given the reference image <code>I<sub>ref</sub></code>, target prompt <code>T<sub>tar</sub></code> and concept guidance <code>T<sub>cg</sub></code>, the concept extractor disentangles concept representations <code>f<sub>cpt</sub></code> by concatenating CLIP features <code>f<sub>cg</sub></code> of <code>T<sub>cg</sub></code> with a learnable query <code>q</code>, and feeds <code>f<sub>cpt</sub></code> into additional cross-attention layers in U-Net to generate target image <code>I<sub>tar</sub></code>. A learnable block embedding <code>e<sub>i</sub></code> is added to <code>q</code> to align the concept domain of i-th diffusion block.</p>
+          <h3>(b)</h3>
+          <p>We employ an anti-query <code>q<sub>a</sub></code> to capture irrelevant concepts <code>f<sup>a</sup><sub>cpt</sub></code> in <code>I<sub>ref</sub></code>, and constrain the desired concept <code>f<sup>tar</sup><sub>cpt</sub></code> in <code>I<sub>tar</sub></code> to be similar to <code>f<sub>cpt</sub></code> and orthogonal to <code>f<sup>a</sup><sub>cpt</sub></code> by Contrastive Orthogonal Disentangled (COD) Learning.</p>
       </div>
     </div>
     <!--/ Paper video. -->
