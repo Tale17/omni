@@ -130,11 +130,17 @@
           concepts in any combination without conflicts.
         </p>
         <p>
-          Our OmniPrism can disentangle and generate different
-          concepts in an image, and combine these concepts into one
-          result in different ways. Based on our method, we can
-          achieve multiple downstream applications such as:
-          Based on <b>OmniPrism</b>, we can also achieve more applications, such as <a href="#combina">multi-content combination</a>, <a href="#blend">concept blending</a>, and <a href="#control">combine with ControlNet</a>.
+          Based on <b>OmniPrism</b>, we can achieve multiple downstream applications such as:
+          <ul>
+            <li>content disentanglement, <i>e.g.</i>, subject customization</li>
+            <li>style disentanglement, <i>e.g.</i>, stylized generation</li>
+            <li>composition disentanglement, <i>e.g.</i>, spatial control or relationship customization</li>
+            <li>content + style, <i>e.g.</i>, subject stylization</li>
+            <li>content + composition, <i>e.g.</i>, subject pose control</li>
+            <li><i>etc.</i></li>
+          </ul>
+          In addition to these flexible applications shown in <a href="#main_res">Main Results</a>, we can also demonstrate 
+          the potentials on more creative applications, such as <a href="#combina">multi-content combination</a>, <a href="#blend">concept blending</a>, and <a href="#control">combine with ControlNet</a>.
         </p>
       </h2>
     </div>
@@ -225,7 +231,7 @@
     <!-- Comparisons. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2">Comparisons with State-of-the-Arts</h2>
+        <h2 id="main_res", class="title is-2">Comparisons with State-of-the-Arts</h2>
         <img src="./static/images/compare.jpg"
           class="interpolation-image"
           alt="Interpolate start reference image."/>
